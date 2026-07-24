@@ -3,8 +3,6 @@
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-green)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-orange)
 ![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-black)
-![License](https://img.shields.io/badge/License-MIT-blue)
-
 # 🔬 ResearchMind
 
 ### Autonomous Multi-Agent Deep Research System
