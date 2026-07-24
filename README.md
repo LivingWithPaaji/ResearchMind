@@ -92,26 +92,21 @@ Unlike traditional AI chatbots that generate short responses, ResearchMind emplo
 
 # 📂 Project Structure
 
-```
+```text
 ResearchMind/
 │
-├── agents/
-│     ├── search_agent.py
-│     ├── reader_agent.py
-│     ├── writer_agent.py
-│     └── critic_agent.py
+├── __pycache__/            # Python cache files
+├── .gitignore              # Git ignore rules
+├── README.md               # Project documentation
+├── requirements.txt        # Project dependencies
 │
-├── app.py
-├── requirements.txt
-├── .env
-├── README.md
+├── app.py                  # Streamlit frontend application
+├── agents.py               # Multi-Agent AI logic
+├── pipeline.py             # Agent workflow & execution pipeline
+├── tools.py                # Search tools, scraping & utility functions
 │
-└── assets/
+└── .env                    # Environment variables (Not included in Git)
 ```
-
-*(Modify this structure to match your actual project.)*
-
----
 
 # 🛠 Installation
 
