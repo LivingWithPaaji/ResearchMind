@@ -113,7 +113,7 @@ ResearchMind/
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/LiveWithPaaji/ResearchMind.git
+https://github.com/LivingWithPaaji/ResearchMind.git
 ```
 
 ---
