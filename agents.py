@@ -8,7 +8,9 @@ from langchain_ollama import ChatOllama
 load_dotenv()
 
 #model setup 
-llm = ChatOllama(model = "cieloforge/Deepseek-r1-7b-spec:latest",temperature=0)
+llm = ChatOllama(model = "cieloforge/Deepseek-r1-7b-spec:latest",
+                 base_url = "http://localhost:11434",
+                 temperature=0)
 
 
 #1st agent 
