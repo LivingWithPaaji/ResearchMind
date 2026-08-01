@@ -4,13 +4,23 @@ from langchain_core.output_parsers import StrOutputParser
 from tools import web_search , scrape_url 
 from dotenv import load_dotenv
 from langchain_ollama import ChatOllama
+import os
 
 load_dotenv()
 
-#model setup 
-llm = ChatOllama(model = "cieloforge/Deepseek-r1-7b-spec:latest",
-                 base_url = "http://localhost:11434",
-                 temperature=0)
+# Local Ollama model setup.  These environment variables make the model
+# configurable without changing application code.
+OLLAMA_MODEL = os.getenv(
+    "OLLAMA_MODEL",
+    os.getenv("ollama_model", "cieloforge/Deepseek-r1-7b-spec:latest"),
+)
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+
+llm = ChatOllama(
+    model=OLLAMA_MODEL,
+    base_url=OLLAMA_BASE_URL,
+    temperature=0,
+)
 
 
 #1st agent 
@@ -93,4 +103,3 @@ One line verdict:
 ])
 
 critic_chain = critic_prompt | llm | StrOutputParser()
-
